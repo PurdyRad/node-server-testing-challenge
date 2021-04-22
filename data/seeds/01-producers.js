@@ -1,6 +1,6 @@
 
 exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
+  // Deletes ALL existing entries and resets ids
   return knex('producers').truncate()
     .then(function () {
       // Inserts seed entries
