@@ -9,7 +9,7 @@ server.get('/', (req, res) => {
     res.status(200).json({api: 'Up n Runnin Chief'});
 })
 
-server.use('*', (err, req, res, next) => {
+server.get('*', (err, req, res, next) => {
     res.status(500).json({
         customMessage: 'Yikes this will not work',
         message: err.message,

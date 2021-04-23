@@ -48,6 +48,6 @@ describe('Producers Model', () => {
             const producerArr = await db('producers')
             expect(producerArr).toHaveLength(0)
 
-        })
-    })
+        });
+    });
 })

@@ -1,12 +1,5 @@
 const db = require('../../data/dbConfig');
 
-
-module.exports = {
-    getEm,
-    touchOfLife,
-    kissOfDeath
-};
-
 function getEm () {
     return db('producers');
 }
@@ -16,6 +9,12 @@ async function touchOfLife (heat) {
     return db('producers').where('producers_id', id).first()
 }
 
-function kissOfDeath () {
-
+function kissOfDeath (id) {
+    return db('producers').where('producers_id', id).del()
 }
+
+module.exports = {
+    getEm,
+    touchOfLife,
+    kissOfDeath
+};
